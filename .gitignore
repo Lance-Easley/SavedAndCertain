@@ -1,0 +1,24 @@
+# ── Source / build files — not for hosting ──────────────────────────────────
+
+# Notion HTML exports (source material for apologetic writings)
+Apologetic Writings/
+
+# Full logo asset library (only assets/img/ is used)
+S&C Logos/
+
+# Legacy root-level logo files (superseded by assets/img/logo.png)
+/logo.png
+/logo-white.png
+/logo-black.png
+/logo-full.png
+/logo-full-transparent.png
+
+# Build script
+transform_v3.py
+
+# Dev tools
+preview.sh
+
+# OS junk
+.DS_Store
+Thumbs.db

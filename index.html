@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved &amp; Certain — Street Evangelism Ministry</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/logo.png">
+
+    <!-- SEO -->
+    <meta name="description" content="Saved & Certain is a street evangelism ministry sharing the clear gospel of Jesus Christ and defending the faith through Scripture-based apologetic writings.">
+    <meta name="keywords" content="street evangelism, Christian ministry, gospel of Jesus Christ, apologetics, salvation, eternal life, faith alone, sola fide, Scripture, Bible, saved and certain">
+    <meta name="author" content="Saved &amp; Certain Evangelism">
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Saved &amp; Certain — Street Evangelism Ministry">
+    <meta property="og:description" content="A street evangelism ministry sharing the clear gospel of Jesus Christ and defending the faith through Scripture-based apologetic writings.">
+    <meta property="og:image" content="assets/img/logo-full.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saved &amp; Certain — Street Evangelism Ministry">
+    <meta name="twitter:description" content="A street evangelism ministry sharing the clear gospel of Jesus Christ and defending the faith through Scripture-based apologetic writings.">
+    <meta name="twitter:image" content="assets/img/logo-full.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================================
+           DESIGN TOKENS
+           Change these variables to retheme the whole site at once.
+           ============================================================ */
+        :root {
+            --navy:        #000000;
+            --navy-mid:    #111111;
+            --navy-light:  #222222;
+            --gold:        #eebd4f;
+            --gold-light:  #f5d07a;
+            --gold-subtle: rgba(238, 189, 79, 0.12);
+            --white:       #ffffff;
+            --off-white:   #f5f5f5;
+            --slate:       #6b7280;
+            --slate-dark:  #374151;
+            --text:        #111111;
+
+            --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.09);
+            --shadow-md:   0 2px 6px rgba(0,0,0,0.10), 0 12px 32px rgba(0,0,0,0.12);
+            --shadow-lg:   0 4px 12px rgba(0,0,0,0.12), 0 24px 64px rgba(0,0,0,0.15);
+        }
+
+        /* ============================================================
+           RESET & BASE
+           ============================================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html  { scroll-behavior: smooth; }
+        body  {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--off-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================
+           NAVIGATION
+           ============================================================ */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2.5rem;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(238, 189, 79, 0.18);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 44px;
+            width: auto;
+            /* The logo has a black background — it blends into the dark nav naturally */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--gold-light); }
+
+        /* ============================================================
+           SHARED SECTION UTILITIES
+           Each <section> has an id and is wrapped with a .section class.
+           To reorder sections: cut the entire <!-- SECTION --> block
+           and paste it in the desired position in the HTML.
+           ============================================================ */
+        .section { padding: 6rem 2rem; }
+
+        .section-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.9rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 4vw, 2.9rem);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.12;
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .section-rule {
+            width: 44px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 2px;
+            margin-bottom: 1.75rem;
+        }
+
+        .section-body {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--slate-dark);
+            max-width: 640px;
+        }
+
+        /* ============================================================
+           BUTTONS
+           ============================================================ */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy);
+            box-shadow: 0 4px 16px rgba(238,189,79,0.28), 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(238,189,79,0.38);
+        }
+
+
+        /* ============================================================
+           SECTION ORDER 1 — HERO
+           Full-viewport photo with layered title card.
+
+           TO SWAP IN YOUR PHOTO:
+             Replace the .hero-bg gradient with:
+               background: url('your-photo.jpg') center/cover no-repeat;
+             then adjust .hero-overlay opacity as needed.
+           ============================================================ */
+        #hero {
+            position: relative;
+            height: 100vh;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--navy);
+        }
+
+        /* ── CAROUSEL SLIDES ──────────────────────────────────────
+           Each slide is a full-bleed background image stacked in the
+           hero. The JS below cycles through them by toggling .active.
+           To add/remove images: edit the slide divs in the HTML.
+           ──────────────────────────────────────────────────────── */
+        .hero-slide {
+            position: absolute;
+            inset: -3%;          /* oversize slightly so blur never shows edges */
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            filter: blur(22px);
+            transform: scale(1.06);
+            transition: opacity 1.5s ease-in-out, filter 1.5s ease-in-out;
+            will-change: opacity, filter, transform;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            filter: blur(0px);
+            animation: heroZoom 6.5s ease-out forwards;
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1.06); }
+            to   { transform: scale(1.14); }
+        }
+
+        /* Dark gradient overlay — keep this even with a real photo */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.25) 0%,
+                rgba(0,0,0,0.45) 55%,
+                rgba(0,0,0,0.78) 100%
+            );
+        }
+
+        /* Layered frosted-glass title card */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 3rem 3.5rem;
+            max-width: 520px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(238, 189, 79, 0.3);
+            border-radius: 5px;
+            box-shadow:
+                0 0 0 1px rgba(238,189,79,0.08),
+                0 8px 32px rgba(0,0,0,0.5),
+                0 40px 100px rgba(0,0,0,0.35),
+                inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+
+        .hero-logo {
+            width: 280px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+        }
+
+        .hero-rule {
+            width: 56px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1.5rem auto 1.25rem;
+            border-radius: 1px;
+            box-shadow: 0 0 14px rgba(238,189,79,0.5);
+        }
+
+        .hero-tagline {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* Animated scroll cue */
+        .hero-scroll-cue {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.38);
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            animation: scrollBob 2.8s ease-in-out infinite;
+        }
+
+        .scroll-arrow {
+            width: 18px;
+            height: 18px;
+            border-right: 2px solid rgba(238,189,79,0.45);
+            border-bottom: 2px solid rgba(238,189,79,0.45);
+            transform: rotate(45deg);
+        }
+
+        @keyframes scrollBob {
+            0%, 100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+            50%       { opacity: 1;   transform: translateX(-50%) translateY(8px); }
+        }
+
+
+        /* ============================================================
+           SECTION ORDER 2 — GOSPEL OPENER
+           Hook into the full gospel breakdown.
+           ============================================================ */
+        #gospel { background: var(--white); }
+
+        #gospel .section-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        /* Dark card on the left */
+        .gospel-card {
+            background: var(--navy);
+            border-radius: 6px;
+            padding: 3rem 2.75rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 2px 4px rgba(0,0,0,0.08),
+                0 10px 28px rgba(0,0,0,0.14),
+                0 32px 72px rgba(0,0,0,0.12);
+        }
+
+        /* Large decorative quotation mark */
+        .gospel-card::before {
+            content: '\201C';
+            position: absolute;
+            top: -1.25rem;
+            left: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 9rem;
+            line-height: 1;
+            color: rgba(238,189,79,0.09);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .gospel-card-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .gospel-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.22;
+            margin-bottom: 1.4rem;
+        }
+
+        .gospel-card-body {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.68);
+        }
+
+        /* Right-side prose */
+        .gospel-prose { /* inherits .section-* utility classes */ }
+
+
+        /* ============================================================
+           SECTION ORDER 3 — YOUTUBE / VIDEO
+           ============================================================ */
+        #youtube { background: var(--off-white); }
+
+        .yt-embed-wrapper {
+            margin-top: 2.5rem;
+            border-radius: 6px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background: var(--navy-mid);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* iframe fills the 16/9 wrapper */
+        .yt-embed-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        /* ============================================================
+           SECTION ORDER 4 — APOLOGETIC WRITINGS
+           "Why do you believe ___?"
+           ============================================================ */
+        #apologetics { background: var(--white); }
+
+        .writings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        /* Each card is a self-contained link block.
+           ADDING A NEW WRITING: duplicate any .writing-card <a> block
+           and update the href, tag, title, and excerpt. */
+        .writing-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: 6px;
+            padding: 1.85rem 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Gold underline that sweeps in on hover */
+        .writing-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.22s ease;
+        }
+
+        .writing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(238,189,79,0.25);
+        }
+
+        .writing-card:hover::after { transform: scaleX(1); }
+
+        .writing-tag {
+            display: inline-block;
+            font-size: 0.63rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--gold-subtle);
+            padding: 0.25rem 0.65rem;
+            border-radius: 2px;
+            margin-bottom: 0.85rem;
+        }
+
+        .writing-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.38;
+            margin-bottom: 0.75rem;
+        }
+
+        .writing-excerpt {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            color: var(--slate);
+        }
+
+        .writing-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy);
+            transition: color 0.2s;
+        }
+
+        .writing-card:hover .writing-read-more { color: var(--gold); }
+
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.45);
+            text-align: center;
+            padding: 2.75rem 1.5rem;
+            font-size: 0.84rem;
+            line-height: 1.9;
+            border-top: 1px solid rgba(238,189,79,0.14);
+        }
+
+        footer .footer-logo {
+            display: block;
+            width: 80px;
+            height: auto;
+            margin: 0 auto 0.85rem;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: var(--gold-light); }
+
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 800px) {
+            #gospel .section-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            nav { padding: 1rem 1.25rem; }
+            .nav-links { gap: 1.1rem; }
+            .section { padding: 4.5rem 1.25rem; }
+            .hero-content { padding: 2.25rem 1.75rem; margin: 0 1.25rem; }
+        }
+
+        @media (max-width: 420px) {
+            /* TODO: add hamburger menu to replace hidden nav */
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     SECTION ORDER 1 — HERO
+     ─────────────────────────────────────────────────────────
+     CAROUSEL IMAGES: Add or remove .hero-slide divs below.
+     JS at the bottom of the file handles the auto-rotation.
+     Each image shows for ~5s with a 1.5s blur crossfade.
+     ============================================================ -->
+<section id="hero">
+
+    <!-- CAROUSEL SLIDES — add/remove/reorder freely -->
+    <div class="hero-slide" style="background-image: url('assets/img/carousel-1.png')"></div>
+    <div class="hero-slide" style="background-image: url('assets/img/carousel-2.png')"></div>
+    <div class="hero-slide" style="background-image: url('assets/img/carousel-3.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('assets/img/carousel-4.png')"></div>
+    <div class="hero-slide" style="background-image: url('assets/img/carousel-5.jpg')"></div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <img src="assets/img/logo-full.png" alt="Saved &amp; Certain" class="hero-logo">
+        <div class="hero-rule"></div>
+        <p class="hero-tagline">Street Evangelism Ministry</p>
+    </div>
+
+    <div class="hero-scroll-cue">
+        Scroll
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- ============================================================
+     NAVIGATION — sticky: sits below the hero, locks to the top
+     as the user scrolls down through the rest of the page.
+     ============================================================ -->
+<nav>
+    <a href="#" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Saved &amp; Certain">
+    </a>
+    <ul class="nav-links">
+        <li><a href="gospel.html">The Gospel</a></li>
+        <li><a href="#youtube">Videos</a></li>
+        <li><a href="#apologetics">Writings</a></li>
+    </ul>
+</nav>
+
+
+<!-- ============================================================
+     SECTION ORDER 2 — GOSPEL OPENER
+     ─────────────────────────────────────────────────────────
+     Links to: gospel.html
+     ============================================================ -->
+<section id="gospel" class="section">
+    <div class="section-inner">
+
+        <!-- Left: dark hook card -->
+        <div class="gospel-card">
+            <p class="gospel-card-label">The Gospel</p>
+            <h2 class="gospel-question">How do we<br>get to Heaven?</h2>
+            <p class="gospel-card-body">
+                Most people answer: "By being a good person." Let's take that
+                to the courtroom. If God is a perfectly just judge, none of us
+                walk free on our own merit — but someone stepped in to pay the
+                fine. The Bible lays it out plainly, and it's better news than
+                you've ever heard.
+            </p>
+            <a href="gospel.html" class="btn btn-gold" style="margin-top: 2rem;">
+                Read the Full Gospel &rarr;
+            </a>
+        </div>
+
+        <!-- Right: explanatory prose -->
+        <div class="gospel-prose">
+            <span class="section-label">Start Here</span>
+            <h2 class="section-title">The message that<br><em>changes everything</em></h2>
+            <div class="section-rule"></div>
+            <p class="section-body">
+                Saved &amp; Certain exists to take the Gospel of Jesus Christ into
+                the streets — one conversation at a time. On this site you'll find
+                a clear presentation of the Good News, video from the field, and
+                in-depth answers to the hard questions people ask.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION ORDER 3 — YOUTUBE / VIDEO
+     ─────────────────────────────────────────────────────────
+     To swap the video: replace the 11-character ID in the
+     iframe src below (the part after /embed/).
+     ============================================================ -->
+<section id="youtube" class="section">
+    <div class="section-inner">
+
+        <span class="section-label">On the Streets</span>
+        <h2 class="section-title">Watch the ministry <em>in action</em></h2>
+        <div class="section-rule"></div>
+        <p class="section-body">
+            Follow along on YouTube for real conversations about faith, eternity,
+            and the Gospel — unscripted, unedited, and in the open air.
+        </p>
+
+        <div class="yt-embed-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/BNmJb2JeMjM?rel=0"
+                title="Saved &amp; Certain — Street Evangelism"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <a href="https://youtube.com/@SavedAndCertain" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 2rem;">
+            Visit the YouTube Channel &rarr;
+        </a>
+
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION ORDER 4 — APOLOGETIC WRITINGS
+     ─────────────────────────────────────────────────────────
+     ADDING A NEW WRITING:
+       1. Export the Notion page as HTML into the "Apologetic Writings/" folder.
+       2. Add a new entry to the WRITINGS list in transform_v3.py.
+       3. Run: python3 transform_v3.py  — it will generate the writings/ page.
+       4. Add a .writing-card <a> block below pointing to the new file.
+     ============================================================ -->
+<section id="apologetics" class="section">
+    <div class="section-inner">
+
+        <span class="section-label">In Depth</span>
+        <h2 class="section-title">Why do you believe <em>___?</em></h2>
+        <div class="section-rule"></div>
+        <p class="section-body">
+            Hard questions deserve careful answers. These writings work through
+            the topics that come up most often in open-air conversations —
+            straight from Scripture, with nothing to hide.
+        </p>
+
+        <div class="writings-grid">
+
+            <a href="writings/works-and-salvation.html" class="writing-card">
+                <span class="writing-tag">Soteriology</span>
+                <h3 class="writing-title">Do works play any role in saving us?</h3>
+                <p class="writing-excerpt">
+                    Can good deeds earn a place in Heaven? What does James mean
+                    when he says faith without works is dead — and how does that
+                    square with Paul?
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+            <a href="writings/water-baptism.html" class="writing-card">
+                <span class="writing-tag">Baptism</span>
+                <h3 class="writing-title">Does water baptism save?</h3>
+                <p class="writing-excerpt">
+                    Is baptism required for salvation, or is it an outward sign
+                    of something that has already happened inwardly? What does
+                    the Bible actually say?
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+            <a href="writings/belief-faith-trust.html" class="writing-card">
+                <span class="writing-tag">Soteriology</span>
+                <h3 class="writing-title">Belief, Faith &amp; Trust in Jesus</h3>
+                <p class="writing-excerpt">
+                    How does Scripture define the faith that saves? A deep look
+                    at what it means to truly believe in Jesus — far beyond
+                    acknowledging historical facts.
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+            <a href="writings/eternal-security.html" class="writing-card">
+                <span class="writing-tag">Assurance</span>
+                <h3 class="writing-title">Eternal Security</h3>
+                <p class="writing-excerpt">
+                    Can a genuine believer lose their salvation? Scripture speaks
+                    directly to the permanence of God's gift — and the answer
+                    is more certain than you might expect.
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+            <a href="writings/predestination.html" class="writing-card">
+                <span class="writing-tag">Theology</span>
+                <h3 class="writing-title">Predestination</h3>
+                <p class="writing-excerpt">
+                    What does Scripture actually teach about God's sovereignty
+                    and election? A verse-by-verse walk through some of the
+                    most debated passages in the Bible.
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+            <a href="writings/sola-scriptura.html" class="writing-card">
+                <span class="writing-tag">Authority</span>
+                <h3 class="writing-title">Sola Scriptura</h3>
+                <p class="writing-excerpt">
+                    Is the Bible alone the final authority for faith and practice?
+                    What Scripture teaches about its own sufficiency — and why
+                    it matters for every believer.
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+            <a href="writings/paul-certainty.html" class="writing-card">
+                <span class="writing-tag">Assurance</span>
+                <h3 class="writing-title">Was Paul Confident or Certain He Would Go To Heaven?</h3>
+                <p class="writing-excerpt">
+                    Examining Paul's own words to see whether he expressed mere
+                    confidence or full certainty about his place in Heaven —
+                    and what that means for us.
+                </p>
+                <span class="writing-read-more">Read &rarr;</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+    <img src="assets/img/logo.png" alt="Saved &amp; Certain" class="footer-logo">
+    <p>Saved &amp; Certain Evangelism</p>
+    <p style="margin-top:0.6rem;">
+        <a href="gospel.html">The Gospel</a>
+        &ensp;&middot;&ensp;
+        <a href="#youtube">Videos</a>
+        &ensp;&middot;&ensp;
+        <a href="#apologetics">Writings</a>
+        &ensp;&middot;&ensp;
+        <a href="mailto:savedandcertaingospel@gmail.com">Contact</a>
+    </p>
+</footer>
+
+<!-- ============================================================
+     HERO CAROUSEL — auto-rotates through .hero-slide elements
+     Timing: DISPLAY_MS per slide, TRANSITION_MS crossfade blur
+     ============================================================ -->
+<script>
+(function () {
+    var DISPLAY_MS    = 5000;   // how long each image stays fully visible
+    var TRANSITION_MS = 1500;   // must match the CSS transition duration above
+
+    var slides  = Array.from(document.querySelectorAll('.hero-slide'));
+    var current = 0;
+
+    // All slides share identical timing — each fades in over TRANSITION_MS,
+    // holds for DISPLAY_MS, then fades out as the next fades in.
+    // Slide 0 fades in from the black hero background, giving a gentle
+    // open-from-black on page load. Every slide's Ken Burns animation is
+    // tuned to complete exactly when advance() fires, so each eases to a
+    // smooth stop right at the moment of transition.
+    function activate(index) {
+        slides[index].style.animationDuration = (DISPLAY_MS + TRANSITION_MS) + 'ms';
+        slides[index].classList.add('active');
+    }
+
+    activate(0);
+
+    function advance() {
+        var outSlide = slides[current];
+
+        // Freeze the current transform so removing .active doesn't snap the zoom.
+        outSlide.style.transform = window.getComputedStyle(outSlide).transform;
+        outSlide.classList.remove('active');
+        setTimeout(function () {
+            outSlide.style.transform         = '';
+            outSlide.style.animationDuration = '';
+        }, TRANSITION_MS);
+
+        current = (current + 1) % slides.length;
+        activate(current);
+    }
+
+    // All slides fire at the same interval now that timing is uniform.
+    setInterval(advance, DISPLAY_MS + TRANSITION_MS);
+}());
+</script>
+
+</body>
+</html>

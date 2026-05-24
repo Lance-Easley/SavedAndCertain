@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gospel — Saved &amp; Certain</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/logo.png">
+
+    <!-- SEO -->
+    <meta name="description" content="What is the gospel? A verse-by-verse breakdown of what Jesus and the apostles taught about salvation, eternal life, and how to be saved.">
+    <meta name="keywords" content="what is the gospel, how to be saved, salvation, eternal life, Jesus Christ, believe in Jesus, John 3:16, gospel presentation, Christian faith, Scripture, Bible">
+    <meta name="author" content="Saved &amp; Certain Evangelism">
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Gospel — Saved &amp; Certain">
+    <meta property="og:description" content="A verse-by-verse breakdown of what Jesus and the apostles taught about salvation, eternal life, and how to be saved.">
+    <meta property="og:image" content="assets/img/logo-full.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Gospel — Saved &amp; Certain">
+    <meta name="twitter:description" content="A verse-by-verse breakdown of what Jesus and the apostles taught about salvation, eternal life, and how to be saved.">
+    <meta name="twitter:image" content="assets/img/logo-full.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================================
+           DESIGN TOKENS — identical to index.html for consistency
+           ============================================================ */
+        :root {
+            --navy:        #000000;
+            --navy-mid:    #111111;
+            --navy-light:  #222222;
+            --gold:        #eebd4f;
+            --gold-light:  #f5d07a;
+            --gold-subtle: rgba(238, 189, 79, 0.12);
+            --white:       #FFFFFF;
+            --off-white:   #f5f5f5;
+            --slate:       #6b7280;
+            --slate-dark:  #374151;
+            --text:        #111111;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--off-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============================================================
+           NAV (shared with index.html)
+           ============================================================ */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2.5rem;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(238, 189, 79, 0.18);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            height: 44px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--gold-light); }
+
+        /* ============================================================
+           PAGE HERO — compact, text-only
+           ============================================================ */
+        .page-hero {
+            background: var(--navy);
+            padding: 4rem 2rem 5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(238,189,79,0.15);
+        }
+
+        .page-eyebrow {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.08;
+            margin-bottom: 1.25rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .page-rule {
+            width: 48px;
+            height: 2px;
+            background: var(--gold);
+            margin: 0 auto 1.4rem;
+            border-radius: 1px;
+            box-shadow: 0 0 12px rgba(238,189,79,0.40);
+        }
+
+        .page-subtitle {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.65);
+            font-weight: 300;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           ARTICLE LAYOUT
+           ============================================================ */
+        .article-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 5rem 2rem 7rem;
+        }
+
+        /* ── Gospel point blocks ── */
+        .gospel-point {
+            margin-bottom: 3.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+        }
+
+        .gospel-point:last-of-type {
+            border-bottom: none;
+        }
+
+        .point-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border-radius: 50%;
+            margin-bottom: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+        }
+
+        .point-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.22;
+            margin-bottom: 1rem;
+        }
+
+        .point-body {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--slate-dark);
+        }
+
+        .point-body p + p { margin-top: 1.1rem; }
+
+        /* Scripture pull-quote */
+        .scripture {
+            margin: 1.75rem 0;
+            padding: 1.5rem 2rem;
+            background: var(--navy);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 12px 36px rgba(0,0,0,0.08);
+        }
+
+        .scripture-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.08rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.88);
+            line-height: 1.75;
+            margin-bottom: 0.65rem;
+        }
+
+        .scripture-ref {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* ── Call-to-action box at bottom ── */
+        .gospel-cta {
+            background: var(--navy);
+            border-radius: 6px;
+            padding: 3rem;
+            text-align: center;
+            margin-top: 4rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 24px 64px rgba(0,0,0,0.12);
+        }
+
+        .gospel-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .gospel-cta p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.98rem;
+            line-height: 1.8;
+            max-width: 480px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--navy);
+            box-shadow: 0 4px 16px rgba(238,189,79,0.28);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(238,189,79,0.38);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.25);
+            color: rgba(255,255,255,0.8);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--slate);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 3.5rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--navy); }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.45);
+            text-align: center;
+            padding: 2.75rem 1.5rem;
+            font-size: 0.84rem;
+            line-height: 1.9;
+            border-top: 1px solid rgba(238,189,79,0.14);
+        }
+
+        footer .footer-logo {
+            display: block;
+            width: 80px;
+            height: auto;
+            margin: 0 auto 0.85rem;
+            opacity: 0.9;
+        }
+
+        footer a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: var(--gold-light); }
+
+        /* Sub-headings within a gospel point */
+        .point-subhead {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.13rem;
+            font-style: italic;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2rem 0 0.75rem;
+            line-height: 1.35;
+        }
+
+        /* Bulleted list of God's laws */
+        .law-list {
+            list-style: none;
+            margin: 1.25rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+
+        .law-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+            font-size: 1.03rem;
+            color: var(--slate-dark);
+            line-height: 1.55;
+        }
+
+        .law-list li::before {
+            content: '';
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: var(--gold);
+            border-radius: 50%;
+            margin-top: 0.52rem;
+            flex-shrink: 0;
+        }
+
+        /* Q&A catechism block */
+        .catechism {
+            margin: 1.75rem 0;
+            border-left: 3px solid rgba(238,189,79,0.35);
+            padding-left: 1.5rem;
+        }
+
+        .catechism-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .catechism-item:first-child { padding-top: 0; }
+        .catechism-item:last-child  { border-bottom: none; padding-bottom: 0; }
+
+        .cat-q {
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--slate-dark);
+            line-height: 1.55;
+            margin-bottom: 0.3rem;
+        }
+
+        .cat-a {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--navy);
+            padding-left: 1.35rem;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .cat-a::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        /* Closing section (no number circle) */
+        .gospel-close {
+            margin-bottom: 3.5rem;
+            padding-bottom: 3.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+        }
+
+        .close-rule {
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            margin-bottom: 1.5rem;
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(238,189,79,0.35);
+        }
+
+        .gospel-ps {
+            margin-top: 1.5rem;
+            color: var(--slate);
+            font-size: 0.97rem;
+        }
+
+        @media (max-width: 640px) {
+            nav { padding: 1rem 1.25rem; }
+            .nav-links { gap: 1.1rem; }
+            .article-wrap { padding: 4rem 1.25rem 5rem; }
+            .scripture { padding: 1.25rem 1.5rem; }
+            .gospel-cta { padding: 2.25rem 1.5rem; }
+            .btn-outline { margin-left: 0; margin-top: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Saved &amp; Certain">
+    </a>
+    <ul class="nav-links">
+        <li><a href="gospel.html">The Gospel</a></li>
+        <li><a href="index.html#youtube">Videos</a></li>
+        <li><a href="index.html#apologetics">Writings</a></li>
+    </ul>
+</nav>
+
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+    <p class="page-eyebrow">The Good News</p>
+    <h1 class="page-title">How do we get to Heaven?</h1>
+    <div class="page-rule"></div>
+    <p class="page-subtitle">
+        The most important question anyone will ever face —
+        and the Bible gives a clear, certain answer.
+    </p>
+</header>
+
+
+<!-- ARTICLE -->
+<article class="article-wrap">
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+    <!-- ── POINT 1 ── -->
+    <div class="gospel-point">
+        <div class="point-number">1</div>
+        <h2 class="point-heading">None of us are as good as we think</h2>
+        <div class="point-body">
+            <p>Let's start with a simple question: <em>How do we get to Heaven, in your opinion?</em></p>
+            <p>Many people answer: <em>"By being a good person! If you do good, you'll be in Heaven!"</em></p>
+            <p>Let's say that's the case for a minute. Have you <em>always</em> been a "good person"?</p>
+            <p>If we're honest with each other, none of us have been good all our lives; we've all done bad things before, especially in the eyes of God.</p>
+
+            <h3 class="point-subhead">Let's take it to the courtroom…</h3>
+            <p>Say I got a speeding ticket. I could try to tell the judge: "I'm sorry I sped, it was wrong and I'm sorry for it and I won't do it again. But I still do all these good things! I give back to the community by giving food to homeless people, donating to charity, I even volunteer at the pet shelter to get homes for puppies! If you sent me to jail, that stuff would stop and we don't want that right? So could you please just forgive me and let me go?"</p>
+
+            <h3 class="point-subhead">If the judge is a good judge, following the law, what would he or she say to that?</h3>
+            <p>Obviously no. It doesn't matter what good I've done in the past or promise to do in the future; if I broke the law, the punishment has to be paid for.</p>
+
+            <h3 class="point-subhead">But, what if someone else came in…</h3>
+            <p>…and said to the judge: "Judge I know he's guilty, but I'm here to pay his fine." What would the judge say to that? Well by the law, if the punishment is paid for, the judge would say: "well you still committed the crime, but someone's taken your punishment for you, so you're free to go."</p>
+
+            <h3 class="point-subhead">And that's LEGAL! Even in this fallen world.</h3>
+            <p>I didn't deserve it nor did I do anything to earn it; it was an amazing and generous gift from someone else.</p>
+        </div>
+    </div>
+
+    <!-- ── POINT 2 ── -->
+    <div class="gospel-point">
+        <div class="point-number">2</div>
+        <h2 class="point-heading">That's exactly why Jesus Christ had to die for us</h2>
+        <div class="point-body">
+            <p>All of us have broken God's law. Here's just four of those laws:</p>
+
+            <ul class="law-list">
+                <li>Have you lied before? Even a white lie?</li>
+                <li>Have you stolen anything? No matter the value? What about when you were a kid?</li>
+                <li>Have you ever looked at someone with lust before?</li>
+                <li>Have you ever dishonored or disobeyed your parents?</li>
+            </ul>
+
+            <p>I'm guilty of all four of these. If you're honest with yourself, you've broken at least one of these four. So what does the Bible say is our punishment for breaking God's law?</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"For the wages of sin is death,"</p>
+                <p class="scripture-ref">Romans 6:23</p>
+            </div>
+
+            <p>Wages means something we earn — like a paycheck for working, or a punishment for breaking a law. We're all on death row, as that's how serious sin is to a perfect God. Just like a judge, God can't overlook any crime, sweeping it under a rug, otherwise He'd be unjust. But that's why I love the other half of this verse:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord."</p>
+                <p class="scripture-ref">Romans 6:23</p>
+            </div>
+
+            <p>Think back to the courtroom example; I was clearly guilty, but someone else stepped in to pay my fine for me as a free gift. Likewise, God offers us the free gift of eternal life — Heaven — in Christ Jesus. For our case though, it wasn't just a random person that walked into our courtroom. It was the judge Himself who rightly declared you guilty by the law, but then stepped down off of His throne, took off his robes and said: <em>"I love you too much to give you the punishment you rightly deserve. I want to take it for you."</em></p>
+        </div>
+    </div>
+
+    <!-- ── POINT 3 ── -->
+    <div class="gospel-point">
+        <div class="point-number">3</div>
+        <h2 class="point-heading">How do we accept this gift?</h2>
+        <div class="point-body">
+            <p>If I were to hand you a birthday present, what would you have to do? You'd have to reach out and take it of course! It's a physical gift so it required a physical action to accept it.</p>
+
+            <h3 class="point-subhead">How do we accept God's free gift, which isn't physical?</h3>
+            <p>The same way you'd accept a promise from any trustworthy person.</p>
+            <p>If you had a friend that you knew was dependable walk up to you and say <em>"I wanna give you a gift, I'll cover supper for you. I know exactly how much you need and I'll bring it all to you. Even if you leave this spot, I'll find you and bring it to you. I promise I'll come through with this"</em> — you'd accept your friend's promise by trusting, believing, and/or having faith in them.</p>
+
+            <h3 class="point-subhead">It's the same way with Jesus.</h3>
+
+            <div class="scripture">
+                <p class="scripture-text">"And this is the promise that he made to us — eternal life."</p>
+                <p class="scripture-ref">1 John 2:25</p>
+            </div>
+
+            <p>Jesus promised us eternal life; we accept this by believing in Him.</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"For God so loved the world that He gave His one and only Son, that everyone who believes in Him shall not perish but have eternal life."</p>
+                <p class="scripture-ref">John 3:16</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">"Truly, truly, I say to you, whoever hears my word and believes him who sent me has eternal life. He does not come into judgment, but has passed from death to life."</p>
+                <p class="scripture-ref">John 5:24</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">Then he brought them out and said, "Sirs, what must I do to be saved?" And they said, "Believe in the Lord Jesus, and you will be saved, you and your household."</p>
+                <p class="scripture-ref">Acts 16:30–31</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── POINT 4 ── -->
+    <div class="gospel-point">
+        <div class="point-number">4</div>
+        <h2 class="point-heading">Believe means more than a historical belief</h2>
+        <div class="point-body">
+            <p>I could say that I believe Abraham Lincoln or George Washington were real people, but that's not the type of belief Jesus requires of us. The Greek word He uses is <em>pisteuó</em>, which implies trusting in Jesus — that He paid the fine for all your sins and promises you eternal life in Heaven.</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"You believe that God is one; you do well. Even the demons believe — and shudder!"</p>
+                <p class="scripture-ref">James 2:19</p>
+            </div>
+
+            <p>The demons have the belief that God exists and is one, but they don't trust in Jesus — they rebel against Him.</p>
+            <p>Here's the beautiful part:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"In him you also, when you heard the word of truth, the gospel of your salvation, and believed in him, were sealed with the promised Holy Spirit, who is the guarantee of our inheritance <em>[Heaven]</em> until we acquire possession of it, to the praise of his glory."</p>
+                <p class="scripture-ref">Ephesians 1:13–14</p>
+            </div>
+
+            <p>When you put your trust in Jesus, He gives you the Holy Spirit as a seal and a guarantee that you will be in Heaven. "How can I know that for sure?" — because the person who promised you that is God, the most perfect being of all. If God is perfect, He cannot lie and will always pull through with what He promises! It's for this reason that John writes:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"I write these things to you who believe in the name of the Son of God, that you may <em>know</em> that you have eternal life."</p>
+                <p class="scripture-ref">1 John 5:13</p>
+            </div>
+
+            <h3 class="point-subhead">"I don't know — I feel like I need to clean up my life first."</h3>
+            <p>I've tried to clean up my life on my own. I tried to stop my addictions, I tried to be better on my own. Spoiler alert — <strong>it never worked</strong>. Why? Because I was relying on my own strength to do it. God knows that we can't do it on our own. That's why God gives us the Holy Spirit, not just to guarantee us Heaven, but also to give us a new life in this world.</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come."</p>
+                <p class="scripture-ref">2 Corinthians 5:17</p>
+            </div>
+
+            <p>Jesus speaks of the necessity of the Holy Spirit as well:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"Truly, truly, I say to you, unless one is born of water and the Spirit, he cannot enter the kingdom of God. That which is born of the flesh is flesh, and that which is born of the Spirit is spirit."</p>
+                <p class="scripture-ref">John 3:5–6</p>
+            </div>
+
+            <p>We've all been born of the flesh — we all have a body. Being born of the Spirit is receiving the Holy Spirit, the same one mentioned in Ephesians 1:13–14, that those who believe and trust in Jesus are gifted by God.</p>
+
+            <h3 class="point-subhead">Think of it like this…</h3>
+            <p>We all start out as a dirty cup, sin all over our lives. Isaiah 64:6 tells us that <em>"all our righteous deeds are like filthy rags."</em> So if we tried to clean a dirty cup with a filthy rag, how clean do you think we'd get? Not clean at all — we may even bring more dirt into the cup.</p>
+            <p>But what if we took that same dirty cup and put it under a clean faucet? It would get clean! Would it be instantly clean? No, it'll take some time. Is the cup cleaning itself? No, it's the water.</p>
+            <p>We are the cup, and in this example, God is the faucet who's pouring the Holy Spirit into our life. That's how we get clean. God gives us the Holy Spirit to strengthen and convict us so that we are sanctified — made more holy — as time goes on. I've lived it myself, and God will do the same for you if you put your full trust in Jesus.</p>
+        </div>
+    </div>
+
+    <!-- ── POINT 5 ── -->
+    <div class="gospel-point">
+        <div class="point-number">5</div>
+        <h2 class="point-heading">Trust in Jesus alone — not Jesus plus anything</h2>
+        <div class="point-body">
+            <p>I cannot make you trust in Jesus. Neither can your friends, your family, not even your pastor. Only you will be standing before God, the most just and righteous judge. Remember what the penalty is for even one of your sins? Death. Hell.</p>
+            <p>You do not have to take that punishment on yourself. God made a way for us to be saved from our sin — to change our mind about Jesus and our sin, and put our trust in Jesus alone, that He paid the punishment for our sin on the Cross. In this amazing way, justice is fulfilled as the fine for breaking God's law is paid, and the most perfect love is shown to us, to lay down one's life for another.</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"But God proves His love for us in this: While we were still sinners, Christ died for us."</p>
+                <p class="scripture-ref">Romans 5:8</p>
+            </div>
+
+            <h3 class="point-subhead">Well what if I sin in the future?</h3>
+            <p>That's the incredible part — Jesus paid for the past, present, and future sins of those who put their trust in Him.</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"Consequently, He is able to save to the uttermost those who draw near to God through him, since He always lives to make intercession for them. For it was indeed fitting that we should have such a high priest, holy, innocent, unstained, separated from sinners, and exalted above the heavens. He has no need, like those high priests, to offer sacrifices daily, first for His own sins and then for those of the people, since He did this once for all when he offered up himself."</p>
+                <p class="scripture-ref">Hebrews 7:25–27</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">"And by that will we have been sanctified through the offering of the body of Jesus Christ once for all."</p>
+                <p class="scripture-ref">Hebrews 10:10</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">"But when Christ had offered for all time a single sacrifice for sins, he sat down at the right hand of God, waiting from that time until his enemies should be made a footstool for his feet. For by a single offering he has perfected for all time those who are being sanctified."</p>
+                <p class="scripture-ref">Hebrews 10:12–14</p>
+            </div>
+
+            <h3 class="point-subhead">Let's think through this together…</h3>
+            <p>Say someone put their trust in Jesus Christ today:</p>
+
+            <div class="catechism">
+                <div class="catechism-item">
+                    <p class="cat-q">How much of their sin would Jesus pay for?</p>
+                    <p class="cat-a">All of it.</p>
+                </div>
+                <div class="catechism-item">
+                    <p class="cat-q">Does that mean past, present, and future?</p>
+                    <p class="cat-a">Of course.</p>
+                </div>
+                <div class="catechism-item">
+                    <p class="cat-q">So if Jesus paid 100% of their sin — past, present, and future — how much is left for them to pay for?</p>
+                    <p class="cat-a">None.</p>
+                </div>
+                <div class="catechism-item">
+                    <p class="cat-q">If they have no sin left to pay for, where do they get to go?</p>
+                    <p class="cat-a">Heaven!</p>
+                </div>
+                <div class="catechism-item">
+                    <p class="cat-q">Is that because of anything they did, besides trusting in Jesus' promise?</p>
+                    <p class="cat-a">Nope — it's a free gift from Jesus.</p>
+                </div>
+                <div class="catechism-item">
+                    <p class="cat-q">So why do they get to go to Heaven?</p>
+                    <p class="cat-a">Because Jesus paid it all for them!</p>
+                </div>
+            </div>
+
+            <p>Now, let's say someone else walks up and answers: <em>"I'm going to Heaven because I'm a good person."</em> If that's truly what they're trusting in, would they go to Heaven or Hell? Hell — because even though they may call themselves a good person, they are guilty in God's eyes. As we walked through before, everyone has broken God's law; Hell is the punishment for breaking God's law. As 1 John 1:8 says, <em>"If we say we have no sin, we deceive ourselves, and the truth is not in us."</em></p>
+
+            <p>Someone else walks up and answers: <em>"I'm going to Heaven because Jesus paid for all my sins on the cross and it's by His merit alone that I'll be there."</em> If that's truly what they're trusting in, would they go to Heaven or Hell? Heaven! Jesus will take their place on Judgement Day and their punishment for breaking God's law will be paid for.</p>
+
+            <h3 class="point-subhead">Lastly — what if someone answers:</h3>
+            <p><em>"I'm going to Heaven because I trust in Jesus, <strong>and</strong> I'm a good person."</em></p>
+            <p>Would that person go to Heaven or Hell? Unfortunately, Hell. Why? By trusting in two things to get them to Heaven, are they trusting 100% in Jesus, or only partially? They're not fully trusting in Jesus — they're trusting partially in their own good behavior. Paul warns us about this precisely:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"For by grace you have been saved through faith. And this is not your own doing; it is the gift of God, not a result of works, so that no one may boast."</p>
+                <p class="scripture-ref">Ephesians 2:8–9</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">"But if it is by grace, it is no longer on the basis of works; otherwise grace would no longer be grace."</p>
+                <p class="scripture-ref">Romans 11:6</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">"O foolish Galatians! Who has bewitched you? Before your very eyes Jesus Christ was clearly portrayed as crucified. I would like to learn just one thing from you: Did you receive the Spirit by works of the law, or by hearing with faith? Are you so foolish? After starting in the Spirit, are you now finishing in the flesh?"</p>
+                <p class="scripture-ref">Galatians 3:1–3</p>
+            </div>
+            <div class="scripture">
+                <p class="scripture-text">"Look: I, Paul, say to you that if you accept circumcision, Christ will be of no advantage to you. I testify again to every man who accepts circumcision that he is obligated to keep the whole law. You are severed from Christ, you who would be justified by the law; you have fallen away from grace."</p>
+                <p class="scripture-ref">Galatians 5:2–4</p>
+            </div>
+
+            <p>Jesus even speaks to people who would trust partially in their good deeds to save them:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"Not everyone who says to me, 'Lord, Lord,' will enter the kingdom of heaven, but the one who does the will of my Father who is in heaven. On that day many will say to me, 'Lord, Lord, did we not prophesy in your name, and cast out demons in your name, and do many mighty works in your name?' And then will I declare to them, 'I never knew you; depart from me, you workers of lawlessness.'"</p>
+                <p class="scripture-ref">Matthew 7:21–23</p>
+            </div>
+
+            <p>These people were trying to be justified partly by their own actions — trusting in themselves. The standard God requires is perfection:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"You therefore must be perfect, as your heavenly Father is perfect."</p>
+                <p class="scripture-ref">Matthew 5:48</p>
+            </div>
+
+            <p>Only the person who fully trusts in Jesus alone to save them will make it to Heaven.</p>
+
+            <h3 class="point-subhead">So how do I put my trust in Jesus?</h3>
+            <p>The same way you'd trust anything. Say you're standing next to a chair. You realize that your legs are tired and you need rest. Before you moved a muscle, you trusted that if you were to sit down on that chair, it would hold you up and give you the rest you're seeking. At that moment, before you took any action, you trusted that chair. By your actions, you show to those around you that you trust the chair to hold you up.</p>
+            <p>In the same way, I trust that when I die, Jesus will take my place on Judgement Day, taking my punishment for me. I didn't have to take any action to trust that Jesus will do that for me, just like I didn't have to sit on the chair to trust it. Paul similarly describes what faith is:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"No unbelief made him waver concerning the promise of God, but he grew strong in his faith as he gave glory to God, fully convinced that God was able to do what he had promised. That is why his faith was 'counted to him as righteousness.'"</p>
+                <p class="scripture-ref">Romans 4:20–22</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── CLOSING ── -->
+    <div class="gospel-close">
+        <div class="close-rule"></div>
+        <h2 class="point-heading">We're not promised tomorrow</h2>
+        <div class="point-body">
+            <p>We don't know when Christ will return, nor when we'll take our last breath. People of all ages tragically die every day. I pray that you live a long and happy life, but I also pray that you would put your trust in Jesus Christ alone to save you, before it's too late.</p>
+            <p>If you don't feel ready to, then I urge you: ask questions, seek the Lord, and you will find Him. I've lived that. Countless others have. You can.</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"But from there you will seek the LORD your God and you will find him, if you search after him with all your heart and with all your soul."</p>
+                <p class="scripture-ref">Deuteronomy 4:29</p>
+            </div>
+
+            <p>If you are ready, then as Ephesians said, the moment you put your trust in Jesus Christ, God gives you the Holy Spirit, guaranteeing your place in Heaven!</p>
+            <p>Regardless, read the Bible. It is God's love letter to you, that tells you what He did for you. As Paul puts it:</p>
+
+            <div class="scripture">
+                <p class="scripture-text">"From infancy you have known the Holy Scriptures, which are able to make you wise for salvation through faith in Christ Jesus. All Scripture is God-breathed and is useful for instruction, for conviction, for correction, and for training in righteousness, so that the man of God may be complete, fully equipped for every good work."</p>
+                <p class="scripture-ref">2 Timothy 3:15–16</p>
+            </div>
+
+            <p>Thank you for reading. I pray that God blesses you in whatever situation you're in.</p>
+            <p class="gospel-ps"><em>P.S. to those who trust in Jesus alone — I'll see you in Heaven ;)</em></p>
+        </div>
+    </div>
+
+    <!-- ── CTA ── -->
+    <div class="gospel-cta">
+        <h3>Have questions? We'd love to talk.</h3>
+        <p>
+            These claims are big, and you deserve real answers — not vague reassurances.
+            Reach out directly, or dig into the writings below where the hard questions
+            get worked through in detail.
+        </p>
+        <a href="mailto:savedandcertaingospel@gmail.com" class="btn btn-gold">Send an Email &rarr;</a>
+        <a href="index.html#apologetics" class="btn btn-outline">Explore the Writings</a>
+    </div>
+
+</article>
+
+
+<!-- FOOTER -->
+<footer>
+    <img src="assets/img/logo.png" alt="Saved &amp; Certain" class="footer-logo">
+    <p>Saved &amp; Certain Evangelism</p>
+    <p style="margin-top:0.6rem;">
+        <a href="index.html">Home</a>
+        &ensp;&middot;&ensp;
+        <a href="index.html#youtube">Videos</a>
+        &ensp;&middot;&ensp;
+        <a href="index.html#apologetics">Writings</a>
+    </p>
+</footer>
+
+</body>
+</html>
