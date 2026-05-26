@@ -747,8 +747,12 @@
      ADDING A NEW WRITING:
        1. Export the Notion page as HTML into the "Apologetic Writings/" folder.
        2. Add a new entry to the WRITINGS list in transform_v3.py.
-       3. Run: python3 transform_v3.py  — it will generate the writings/ page.
-       4. Add a .writing-card <a> block below pointing to the new file.
+       3. Add a new entry to the writings array in writings/index.html with:
+              verses: [], // AUTOGEN:your-filename.html
+          (transform_v3.py will populate the verse array automatically on next run)
+       4. Run: python3 transform_v3.py  — generates the writing page and updates
+          the verse index in writings/index.html in one pass.
+       5. To feature it on this page, add a .writing-card <a> block below.
      ============================================================ -->
 <section id="apologetics" class="section">
     <div class="section-inner">
