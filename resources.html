@@ -151,11 +151,9 @@
             background: var(--white);
             border: 1px solid rgba(0,0,0,0.07);
             border-radius: 6px;
-            padding: 2rem 1.85rem;
             box-shadow: var(--shadow-sm);
             display: flex;
             flex-direction: column;
-            gap: 0.85rem;
             position: relative;
             overflow: hidden;
             transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
@@ -170,14 +168,28 @@
         .tract-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(238,189,79,0.25); }
         .tract-card:hover::after { transform: scaleX(1); }
 
-        .tract-icon {
-            width: 40px; height: 40px;
-            background: var(--gold-subtle);
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
+        .tract-thumb {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: var(--navy-light);
             flex-shrink: 0;
         }
-        .tract-icon svg { width: 20px; height: 20px; stroke: var(--gold-dark); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+        .tract-thumb img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .tract-card:hover .tract-thumb img { transform: scale(1.03); }
+
+        .tract-body {
+            padding: 1.5rem 1.65rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex: 1;
+        }
 
         .tract-name {
             font-family: 'Playfair Display', serif;
@@ -332,35 +344,39 @@
         <div class="tract-grid">
 
             <div class="tract-card">
-                <div class="tract-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                <div class="tract-thumb">
+                    <img src="assets/img/tracts/money-gospel-tract.jpeg" alt="$1,000,000 Gospel Tract">
                 </div>
-                <p class="tract-name">$1,000,000 Gospel Tract</p>
-                <p class="tract-desc">
-                    I use this in the courtroom analogy &mdash; where someone else walks in and pays
-                    my fine for me. I encourage people to read it afterwards, while continuing
-                    the analogy. It pairs perfectly with the illustration.
-                </p>
-                <a href="https://www.tractplanet.com/Franklin-Million-Dollar-Bill_p_379.html" target="_blank" rel="noopener" class="tract-link">
-                    Order from Tract Planet
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
+                <div class="tract-body">
+                    <p class="tract-name">$1,000,000 Gospel Tract</p>
+                    <p class="tract-desc">
+                        I use this in the courtroom analogy &mdash; where someone else walks in and pays
+                        my fine for me. I encourage people to read it afterwards, while continuing
+                        the analogy. It pairs perfectly with the illustration.
+                    </p>
+                    <a href="https://www.tractplanet.com/Franklin-Million-Dollar-Bill_p_379.html" target="_blank" rel="noopener" class="tract-link">
+                        Order from Tract Planet
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
             </div>
 
             <div class="tract-card">
-                <div class="tract-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div class="tract-thumb">
+                    <img src="assets/img/tracts/5-questions-tract.jpeg" alt="5 Questions Gospel Tract">
                 </div>
-                <p class="tract-name">5 Questions Gospel Tract</p>
-                <p class="tract-desc">
-                    This tract mirrors the question style I love using when sharing the Gospel.
-                    It's great for when you hand someone a Bible to remind them of the Gospel,
-                    and for when the other person doesn't have much time to talk.
-                </p>
-                <a href="https://www.tractplanet.com/5-Questions_p_530.html" target="_blank" rel="noopener" class="tract-link">
-                    Order from Tract Planet
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
+                <div class="tract-body">
+                    <p class="tract-name">5 Questions Gospel Tract</p>
+                    <p class="tract-desc">
+                        This tract mirrors the question style I love using when sharing the Gospel.
+                        It's great for when you hand someone a Bible to remind them of the Gospel,
+                        and for when the other person doesn't have much time to talk.
+                    </p>
+                    <a href="https://www.tractplanet.com/5-Questions_p_530.html" target="_blank" rel="noopener" class="tract-link">
+                        Order from Tract Planet
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
             </div>
 
         </div>
