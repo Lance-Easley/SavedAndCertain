@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry Resources &mdash; Saved &amp; Certain</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/img/logo.png">
+
+    <!-- SEO -->
+    <meta name="description" content="Gospel tracts and evangelism posters from Saved & Certain — free tools to help you go out and share the Good News with confidence.">
+    <meta name="keywords" content="evangelism resources, gospel tracts, evangelism posters, street evangelism tools, share the gospel, saved and certain">
+    <meta name="author" content="Saved &amp; Certain Evangelism">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ministry Resources &mdash; Saved &amp; Certain">
+    <meta property="og:description" content="Gospel tracts and evangelism posters from Saved & Certain — free tools to help you go out and share the Good News.">
+    <meta property="og:image" content="assets/img/logo-full.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ministry Resources &mdash; Saved &amp; Certain">
+    <meta name="twitter:description" content="Gospel tracts and evangelism posters from Saved & Certain — free tools to help you go out and share the Good News.">
+    <meta name="twitter:image" content="assets/img/logo-full.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:        #000000;
+            --navy-mid:    #111111;
+            --navy-light:  #222222;
+            --gold:        #eebd4f;
+            --gold-light:  #f5d07a;
+            --gold-dark:   #c9992e;
+            --gold-subtle: rgba(238, 189, 79, 0.12);
+            --white:       #ffffff;
+            --off-white:   #f5f5f5;
+            --slate:       #6b7280;
+            --slate-dark:  #374151;
+            --text:        #111111;
+            --shadow-sm:   0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+            --shadow-md:   0 4px 16px rgba(0,0,0,0.12), 0 12px 36px rgba(0,0,0,0.08);
+            --shadow-lg:   0 4px 12px rgba(0,0,0,0.12), 0 24px 64px rgba(0,0,0,0.15);
+            --nav-h:       72px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--off-white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav.site-nav {
+            position: sticky; top: 0; z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.25rem 2.5rem;
+            background: rgba(0,0,0,0.92);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(238,189,79,0.18);
+        }
+        .nav-logo { display: flex; align-items: center; text-decoration: none; }
+        .nav-logo img { height: 44px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            color: rgba(255,255,255,0.7); text-decoration: none;
+            font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em;
+            text-transform: uppercase; transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+
+        /* ── PAGE HERO ── */
+        .page-hero {
+            background: var(--navy);
+            padding: 4rem 2rem 5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(238,189,79,0.15);
+        }
+        .page-tag {
+            display: inline-block;
+            font-size: 0.63rem; font-weight: 600; letter-spacing: 0.2em;
+            text-transform: uppercase; color: var(--gold);
+            background: var(--gold-subtle);
+            padding: 0.28rem 0.7rem; border-radius: 2px; margin-bottom: 1.2rem;
+        }
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+            font-weight: 900; color: var(--white);
+            line-height: 1.12; margin-bottom: 1.25rem;
+        }
+        .page-rule {
+            width: 44px; height: 2px; background: var(--gold);
+            margin: 0 auto 1.4rem; border-radius: 1px;
+            box-shadow: 0 0 10px rgba(238,189,79,0.35);
+        }
+        .page-subtitle {
+            font-size: 1rem; color: rgba(255,255,255,0.62);
+            font-weight: 300; max-width: 540px; margin: 0 auto; line-height: 1.75;
+        }
+
+        /* ── MAIN WRAP ── */
+        .resources-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+
+        /* ── SECTION LABEL / RULE ── */
+        .res-label {
+            font-size: 0.63rem; font-weight: 600; letter-spacing: 0.22em;
+            text-transform: uppercase; color: var(--gold);
+            display: block; margin-bottom: 0.6rem;
+        }
+        .res-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 700; color: var(--navy);
+            line-height: 1.18; margin-bottom: 0.6rem;
+        }
+        .res-heading em { font-style: normal; color: var(--gold-dark); }
+        .res-rule {
+            width: 36px; height: 3px; background: var(--gold);
+            border-radius: 2px; margin-bottom: 0.75rem;
+        }
+        .res-intro {
+            font-size: 0.97rem; line-height: 1.8;
+            color: var(--slate-dark); max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        /* ── RESOURCE DIVIDER ── */
+        .res-divider {
+            border: none; border-top: 1px solid rgba(0,0,0,0.07);
+            margin: 4rem 0;
+        }
+
+        /* ── TRACT CARDS ── */
+        .tract-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .tract-card {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: 6px;
+            padding: 2rem 1.85rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+        }
+        .tract-card::after {
+            content: '';
+            position: absolute; bottom: 0; left: 0; right: 0;
+            height: 3px; background: var(--gold);
+            transform: scaleX(0); transform-origin: left;
+            transition: transform 0.22s ease;
+        }
+        .tract-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: rgba(238,189,79,0.25); }
+        .tract-card:hover::after { transform: scaleX(1); }
+
+        .tract-icon {
+            width: 40px; height: 40px;
+            background: var(--gold-subtle);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .tract-icon svg { width: 20px; height: 20px; stroke: var(--gold-dark); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+        .tract-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem; font-weight: 700;
+            color: var(--navy); line-height: 1.3;
+        }
+        .tract-desc {
+            font-size: 0.88rem; line-height: 1.75;
+            color: var(--slate); flex: 1;
+        }
+        .tract-link {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            margin-top: 0.25rem;
+            font-size: 0.73rem; font-weight: 600; letter-spacing: 0.09em;
+            text-transform: uppercase; text-decoration: none;
+            color: var(--navy); transition: color 0.2s;
+        }
+        .tract-link:hover { color: var(--gold-dark); }
+        .tract-link svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* ── POSTER GALLERY ── */
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+            gap: 1.5rem;
+        }
+        .poster-card {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.07);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.22s, box-shadow 0.22s;
+            display: flex;
+            flex-direction: column;
+        }
+        .poster-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+        .poster-thumb-wrap {
+            background: var(--navy-mid);
+            aspect-ratio: 1 / 2;
+            overflow: hidden;
+            position: relative;
+        }
+        .poster-thumb-wrap img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .poster-card:hover .poster-thumb-wrap img { transform: scale(1.03); }
+
+        /* "View full" overlay on hover */
+        .poster-thumb-wrap::after {
+            content: 'View full poster';
+            position: absolute; inset: 0;
+            background: rgba(0,0,0,0.45);
+            color: var(--white);
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+            text-transform: uppercase;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.22s;
+        }
+        .poster-card:hover .poster-thumb-wrap::after { opacity: 1; }
+
+        .poster-info {
+            padding: 1.1rem 1.25rem 1.25rem;
+            display: flex; flex-direction: column; gap: 0.5rem;
+            flex: 1;
+        }
+        .poster-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.95rem; font-weight: 700;
+            color: var(--navy); line-height: 1.3;
+        }
+        .poster-verses {
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+            text-transform: uppercase; color: var(--gold-dark);
+        }
+        .poster-desc {
+            font-size: 0.82rem; line-height: 1.7;
+            color: var(--slate); flex: 1;
+        }
+        .poster-download {
+            display: inline-flex; align-items: center; gap: 0.35rem;
+            margin-top: 0.5rem;
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.09em;
+            text-transform: uppercase; text-decoration: none;
+            color: var(--navy); transition: color 0.2s;
+        }
+        .poster-download:hover { color: var(--gold-dark); }
+        .poster-download svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--navy); color: rgba(255,255,255,0.45);
+            text-align: center; padding: 2.75rem 1.5rem;
+            font-size: 0.84rem; line-height: 1.9;
+            border-top: 1px solid rgba(238,189,79,0.14);
+        }
+        footer .footer-logo { display: block; width: 80px; height: auto; margin: 0 auto 0.85rem; opacity: 0.9; }
+        footer a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: var(--gold-light); }
+
+        @media (max-width: 640px) {
+            nav.site-nav { padding: 1rem 1.25rem; }
+            .nav-links { gap: 1.1rem; }
+            .resources-wrap { padding: 2.5rem 1.25rem 5rem; }
+        }
+        @media (max-width: 420px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="site-nav">
+    <a href="index.html" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Saved &amp; Certain">
+    </a>
+    <ul class="nav-links">
+        <li><a href="gospel.html">The Gospel</a></li>
+        <li><a href="index.html#youtube">Videos</a></li>
+        <li><a href="writings/index.html">Writings</a></li>
+        <li><a href="resources.html" class="active">Resources</a></li>
+    </ul>
+</nav>
+
+<header class="page-hero">
+    <span class="page-tag">Equip Others</span>
+    <h1 class="page-title">Ministry Resources</h1>
+    <div class="page-rule"></div>
+    <p class="page-subtitle">
+        Tools from the field — tracts and posters used in open-air evangelism.
+        Take what's useful and go share the Good News.
+    </p>
+</header>
+
+<div class="resources-wrap">
+
+    <!-- ── GOSPEL TRACTS ─────────────────────────────────────────── -->
+    <section>
+        <span class="res-label">Gospel Tracts</span>
+        <h2 class="res-heading">Tracts for <em>every conversation</em></h2>
+        <div class="res-rule"></div>
+        <p class="res-intro">
+            A good tract can keep the Gospel in someone's hands long after the conversation ends.
+            These are the two I reach for most.
+        </p>
+
+        <div class="tract-grid">
+
+            <div class="tract-card">
+                <div class="tract-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <p class="tract-name">$1,000,000 Gospel Tract</p>
+                <p class="tract-desc">
+                    I use this in the courtroom analogy &mdash; where someone else walks in and pays
+                    my fine for me. I encourage people to read it afterwards, while continuing
+                    the analogy. It pairs perfectly with the illustration.
+                </p>
+                <a href="https://www.tractplanet.com/Franklin-Million-Dollar-Bill_p_379.html" target="_blank" rel="noopener" class="tract-link">
+                    Order from Tract Planet
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+            </div>
+
+            <div class="tract-card">
+                <div class="tract-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <p class="tract-name">5 Questions Gospel Tract</p>
+                <p class="tract-desc">
+                    This tract mirrors the question style I love using when sharing the Gospel.
+                    It's great for when you hand someone a Bible to remind them of the Gospel,
+                    and for when the other person doesn't have much time to talk.
+                </p>
+                <a href="https://www.tractplanet.com/5-Questions_p_530.html" target="_blank" rel="noopener" class="tract-link">
+                    Order from Tract Planet
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="res-divider">
+
+    <!-- ── EVANGELISM POSTERS ─────────────────────────────────────── -->
+    <section>
+        <span class="res-label">Evangelism Posters</span>
+        <h2 class="res-heading">Signs from <em>the streets</em></h2>
+        <div class="res-rule"></div>
+        <p class="res-intro">
+            These are the posters I take out to open-air evangelism. Download any of them,
+            print them large, and take them with you.
+        </p>
+
+        <div class="poster-grid">
+
+            <div class="poster-card">
+                <a href="assets/img/posters/good-enough-heaven.png" target="_blank" class="poster-thumb-wrap" aria-label="View Good Enough to Get Into Heaven poster">
+                    <img src="assets/img/posters/good-enough-heaven.png" alt="Good Enough to Get Into Heaven poster" loading="lazy">
+                </a>
+                <div class="poster-info">
+                    <p class="poster-name">Good Enough to Get Into Heaven?</p>
+                    <p class="poster-verses">Ephesians 2:8-9</p>
+                    <p class="poster-desc">
+                        One of my favorites. It contrasts depending even slightly on yourself
+                        with trusting fully in Jesus &mdash; a clean setup for the courtroom analogy.
+                    </p>
+                    <a href="assets/img/posters/good-enough-heaven.png" download="Good Enough to Get Into Heaven Poster.png" class="poster-download">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="assets/img/posters/salvation-receipt.png" target="_blank" class="poster-thumb-wrap" aria-label="View Salvation Receipt poster">
+                    <img src="assets/img/posters/salvation-receipt.png" alt="Salvation Receipt poster" loading="lazy">
+                </a>
+                <div class="poster-info">
+                    <p class="poster-name">Salvation Receipt</p>
+                    <p class="poster-verses">Romans 6:23</p>
+                    <p class="poster-desc">
+                        My go-to and calling card in Oxford. Eye-catching, shows forgiveness for
+                        everything, and leads with the bad news before landing on the best news.
+                    </p>
+                    <a href="assets/img/posters/salvation-receipt.png" download="Salvation Receipt Poster.png" class="poster-download">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="assets/img/posters/jesus-redeem.png" target="_blank" class="poster-thumb-wrap" aria-label="View Jesus Christ Wants to Redeem You poster">
+                    <img src="assets/img/posters/jesus-redeem.png" alt="Jesus Christ Wants to Redeem You poster" loading="lazy">
+                </a>
+                <div class="poster-info">
+                    <p class="poster-name">Jesus Christ Wants to Redeem You</p>
+                    <p class="poster-verses">Mark 8:35</p>
+                    <p class="poster-desc">
+                        If you want to convict people while still offering hope, this one has
+                        been really effective. I often tie my own story into it, showing which
+                        of these I'm guilty of.
+                    </p>
+                    <a href="assets/img/posters/jesus-redeem.png" download="Jesus Christ Wants to Redeem You Poster.png" class="poster-download">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="assets/img/posters/questions-christianity.png" target="_blank" class="poster-thumb-wrap" aria-label="View Questions about Christianity poster">
+                    <img src="assets/img/posters/questions-christianity.png" alt="Questions about Christianity poster" loading="lazy">
+                </a>
+                <div class="poster-info">
+                    <p class="poster-name">Questions about Christianity</p>
+                    <p class="poster-verses">Jeremiah 29:13</p>
+                    <p class="poster-desc">
+                        A more inviting, apologetical opener &mdash; great for college crowds.
+                        Starter questions that anyone can begin with. Make sure you actually
+                        have an answer for each of these yourself though.
+                    </p>
+                    <a href="assets/img/posters/questions-christianity.png" download="Questions about Christianity Poster.png" class="poster-download">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="assets/img/posters/hs-seal-new-creation.png" target="_blank" class="poster-thumb-wrap" aria-label="View Holy Spirit Seal and New Creation poster">
+                    <img src="assets/img/posters/hs-seal-new-creation.png" alt="Holy Spirit Seal and New Creation poster" loading="lazy">
+                </a>
+                <div class="poster-info">
+                    <p class="poster-name">Holy Spirit Seal &amp; New Creation</p>
+                    <p class="poster-verses">2 Cor 5:17 &middot; Eph 1:13-14 &middot; Mark 1:15</p>
+                    <p class="poster-desc">
+                        Wordy, but a solid reference when you're already in a conversation.
+                        Good for grounding someone in what actually happens at the moment
+                        of salvation.
+                    </p>
+                    <a href="assets/img/posters/hs-seal-new-creation.png" download="HS Seal and New Creation Poster.png" class="poster-download">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+            <div class="poster-card">
+                <a href="assets/img/posters/john-3-3.png" target="_blank" class="poster-thumb-wrap" aria-label="View John 3:3 poster">
+                    <img src="assets/img/posters/john-3-3.png" alt="John 3:3 poster" loading="lazy">
+                </a>
+                <div class="poster-info">
+                    <p class="poster-name">John 3:3</p>
+                    <p class="poster-verses">John 3:3</p>
+                    <p class="poster-desc">
+                        Want to link being born of the Holy Spirit while explaining it's not
+                        water baptism that saves? A great launchboard for that conversation,
+                        with an eye-catching heading up top.
+                    </p>
+                    <a href="assets/img/posters/john-3-3.png" download="John 3-3 Poster.png" class="poster-download">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <img src="assets/img/logo.png" alt="Saved &amp; Certain" class="footer-logo">
+    <p>Saved &amp; Certain Evangelism</p>
+    <p style="margin-top:0.6rem;">
+        <a href="index.html">Home</a>
+        &ensp;&middot;&ensp;
+        <a href="gospel.html">The Gospel</a>
+        &ensp;&middot;&ensp;
+        <a href="writings/index.html">Writings</a>
+        &ensp;&middot;&ensp;
+        <a href="mailto:savedandcertaingospel@gmail.com">Contact</a>
+    </p>
+</footer>
+
+</body>
+</html>
