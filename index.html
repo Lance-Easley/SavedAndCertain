@@ -649,12 +649,54 @@
             nav { padding: 1rem 1.25rem; }
             .nav-links { gap: 1.1rem; }
             .section { padding: 4.5rem 1.25rem; }
-            .hero-content { padding: 2.25rem 1.75rem; margin: 0 1.25rem; }
+
+            /* ── MOBILE HERO ──────────────────────────────────────────
+               On small screens the centered card covers too much of the
+               background photo. Fix: remove the card chrome and pin the
+               content to the bottom so the full image shows above it.
+               ──────────────────────────────────────────────────────── */
+            #hero {
+                align-items: flex-end;
+            }
+
+            /* Deepen the bottom gradient so text stays legible without the card */
+            .hero-overlay {
+                background: linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.10) 0%,
+                    rgba(0,0,0,0.25) 45%,
+                    rgba(0,0,0,0.82) 75%,
+                    rgba(0,0,0,0.92) 100%
+                );
+            }
+
+            /* Strip the card chrome, widen to full bleed, sit flush at bottom */
+            .hero-content {
+                max-width: 100%;
+                width: 100%;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                border-radius: 0;
+                padding: 2rem 1.75rem 3.5rem;
+                margin: 0;
+            }
+
+            .hero-logo {
+                width: 220px;
+            }
+
+            /* Scroll cue sits above the bottom-pinned content — hide to avoid overlap */
+            .hero-scroll-cue {
+                display: none;
+            }
         }
 
-        @media (max-width: 420px) {
-            /* TODO: add hamburger menu to replace hidden nav */
-            .nav-links { display: none; }
+        @media (max-width: 475px) {
+            /* Hide the entire navbar on very small screens — index.html is the only
+               page with a sticky nav, so this only affects the homepage. All other
+               pages have static navs that don't overlap the logo. */
+            nav { display: none; }
         }
     </style>
 </head>
