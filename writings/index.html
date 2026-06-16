@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="../assets/img/logo-full.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --navy:        #000000;
@@ -108,6 +108,58 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 3.5rem 2rem 6rem;
+        }
+
+        /* ── COLLECTION INTRO ── */
+        .collection-intro {
+            max-width: 720px;
+            margin: 0 auto 3.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+        .collection-intro p {
+            font-size: 1rem;
+            line-height: 1.85;
+            color: var(--slate-dark);
+        }
+        .collection-intro .intro-note {
+            font-size: 0.9rem;
+            color: var(--slate);
+            font-style: italic;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            padding-top: 1rem;
+            margin-top: 0.25rem;
+        }
+        .intro-scripture {
+            background: var(--navy);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 4px 4px 0;
+            padding: 1.25rem 1.85rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 12px 36px rgba(0,0,0,0.06);
+        }
+        .intro-scripture .intro-scripture-ref {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+        }
+        .intro-scripture .intro-scripture-text {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.88);
+            line-height: 1.78;
+            margin: 0;
+        }
+        .intro-scripture mark {
+            background: rgba(238,189,79,0.35);
+            color: rgba(255,255,255,0.95);
+            font-style: italic;
         }
 
         /* ── CONTROLS BAR ── */
@@ -363,6 +415,34 @@
 
 <main class="writings-wrap">
 
+    <!-- Collection intro -->
+    <div class="collection-intro">
+        <p>
+            This is a collection of my published apologetic writings, where I tackle numerous
+            topics within Christianity. The focus of these comes from my evangelistic efforts,
+            wanting to both be faithful to the gospel, and to engage in inter-faith dialogues.
+        </p>
+
+        <div class="intro-scripture">
+            <p class="intro-scripture-ref">1 Peter 3:14&ndash;16</p>
+            <p class="intro-scripture-text">
+                &ldquo;But even if you should suffer for righteousness&rsquo; sake, you will be blessed.
+                Have no fear of them, nor be troubled, but in your hearts <mark>honor Christ the Lord as holy,
+                always being prepared to make a defense to anyone who asks you for a reason for the hope
+                that is in you; yet do it with gentleness and respect</mark>, keeping a clear conscience, so
+                that those who speak maliciously against your good behavior in Christ may be ashamed of
+                their slander.&rdquo;
+            </p>
+        </div>
+
+        <p class="intro-note">
+            As I finish more writings, this list will be updated. These are all living documents and
+            subject to change &mdash; the last updated date on each writing helps track such revisions.
+            They are listed in order of completion, and the later ones are more refined than the earlier
+            ones; please be patient as I work through each of them.
+        </p>
+    </div>
+
     <!-- Controls -->
     <div class="controls-bar" role="search">
         <div class="search-wrap">
@@ -484,7 +564,7 @@
             tagPlain: 'Catholic Apologetics',
             title: 'Issues with the Catholic Catechisms',
             excerpt: 'A topical breakdown of Catholic Catechisms that contradict what Scripture teaches about salvation, justification, and church authority.',
-            verses: [], // AUTOGEN:catholic-catechisms.html
+            verses: ["55: Seek salvation by patience in well-doing", "162: Faith… We can lose this priceless gift", "837: One who does not however persevere in charity is not saved", "841: Muslims adore the same God", "891: When the Church through its supreme Magisterium proposes a doctrine \"for belief as being divinely revealed,\"… the definitions \"must be adhered to with the obedience of faith.\" This infallibility extends as far as the deposit of divine Revelation itself.", "892: When the Church through its supreme Magisterium proposes a doctrine \"for belief as being divinely revealed,\"… the definitions \"must be adhered to with the obedience of faith.\" This infallibility extends as far as the deposit of divine Revelation itself.", "980: Penance is necessary for salvation… just as Baptism is necessary for salvation", "1036: We may merit to enter with him into the marriage feast and be numbered among the blessed", "1345: We may be found righteous by our life and actions, and faithful to the commandments, so as to obtain eternal salvation.", "1420: New life as a child of God can be lost by sin", "1446: Penance offers a new possibility to recover the grace of justification", "1579: All the ordained ministers of the Latin Church… live a celibate life and who intend to remain celibate", "1580: All the ordained ministers of the Latin Church… live a celibate life and who intend to remain celibate", "1599: Holy Orders normally only for candidates who are ready to embrace celibacy freely", "1816: Service of and witness to the faith are necessary for salvation", "1821: Heaven, God's eternal reward for the good works accomplished with the grace of Christ", "1861: Mortal sin… causes exclusion from Christ's kingdom and the eternal death of hell", "2010: Moved by the Holy Spirit… we can then merit for ourselves… the attainment of eternal life.", "2027: Moved by the Holy Spirit… we can then merit for ourselves… the attainment of eternal life.", "2068: All men may attain salvation through faith, Baptism and the observance of the Commandments.", "2180: Those who fail to participate in the Mass commit a grave sin.", "2181: Those who fail to participate in the Mass commit a grave sin."], // AUTOGEN:catholic-catechisms.html
         }
     ];
 

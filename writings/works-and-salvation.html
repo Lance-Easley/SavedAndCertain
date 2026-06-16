@@ -86,7 +86,7 @@
             padding: 0.28rem 0.7rem; border-radius: 2px; margin-bottom: 1.2rem;
         }
         .page-title {
-            font-family: 'Lora', serif;
+            font-family: 'Playfair Display', serif;
             font-size: clamp(1.9rem, 4.5vw, 3.2rem);
             font-weight: 900; color: var(--white);
             line-height: 1.12; margin-bottom: 1.25rem;
@@ -264,7 +264,7 @@
         /* ── Writing sections ── */
         .writing-section { margin-bottom: 3.5rem; }
         .writing-section h2 {
-            font-family: 'Lora', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.65rem; font-weight: 700;
             color: var(--navy); line-height: 1.2;
             margin-bottom: 1.25rem; padding-bottom: 0.75rem;
@@ -294,7 +294,7 @@
 
         /* ── General subsection heading ── */
         .subsection-heading {
-            font-family: 'Lora', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.2rem; font-weight: 700;
             color: var(--navy-mid); margin: 2rem 0 0.85rem;
         }
@@ -310,20 +310,24 @@
         /* ── Scripture pull-quote ── */
         .scripture {
             margin: 0.75rem 0 1.1rem;
-            padding: 1.4rem 1.85rem;
+            padding: 0.85rem 1.85rem 1.4rem;
             background: var(--navy);
             border-left: 4px solid var(--gold);
             border-radius: 0 4px 4px 0;
             box-shadow: 0 4px 16px rgba(0,0,0,0.12), 0 12px 36px rgba(0,0,0,0.06);
+            display: flex; flex-direction: column;
+        }
+        .scripture p.scripture-ref {
+            order: -1;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem; font-weight: 700; font-style: normal;
+            color: var(--gold); margin-top: 0; margin-bottom: 0.6rem;
+            letter-spacing: 0;
         }
         .scripture p.scripture-text {
             font-family: 'Lora', serif;
             font-size: 1.04rem; font-style: italic;
-            color: rgba(255,255,255,0.88); line-height: 1.78; margin-bottom: 0.65rem;
-        }
-        .scripture p.scripture-ref {
-            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em;
-            text-transform: uppercase; color: var(--gold);
+            color: rgba(255,255,255,0.88); line-height: 1.78;
         }
         .scripture mark.hl-yellow { background: rgba(238,189,79,0.35); color: rgba(255,255,255,0.95); }
         .scripture mark.hl-red { color: #fca5a5; background: transparent; font-style: inherit; }
@@ -356,7 +360,7 @@
             box-shadow: 0 8px 32px rgba(0,0,0,0.16), 0 24px 64px rgba(0,0,0,0.10);
         }
         .more-writings h3 {
-            font-family: 'Lora', serif;
+            font-family: 'Playfair Display', serif;
             font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem;
         }
         .more-writings p {
@@ -410,6 +414,7 @@
         <li><a href="../gospel.html">The Gospel</a></li>
         <li><a href="../index.html#youtube">Videos</a></li>
         <li><a href="index.html">Writings</a></li>
+        <li><a href="../resources.html">Resources</a></li>
     </ul>
 </nav>
 
@@ -1580,9 +1585,10 @@ This is why Jesus says in 7:23 <mark class="hl-red">“I never knew you;”</mar
     <hr class="section-divider">
 
     <div class="more-writings">
-        <h3>More to explore</h3>
-        <p>Browse the other apologetic writings, or start with the full Gospel presentation.</p>
-        <a href="index.html" class="btn btn-gold">All Writings &rarr;</a>
+        <h3>Disagree? Contact me.</h3>
+        <p>If you think something here is wrong, I&rsquo;d genuinely love to hear from you.
+        Send me the passage, your reasoning, and let&rsquo;s work through it together from Scripture.</p>
+        <a href="mailto:savedandcertaingospel@gmail.com" class="btn btn-gold">Send an Email &rarr;</a>
     </div>
 
 </article>
@@ -1673,6 +1679,8 @@ This is why Jesus says in 7:23 <mark class="hl-red">“I never knew you;”</mar
         <a href="../gospel.html">The Gospel</a>
         &ensp;&middot;&ensp;
         <a href="index.html">Writings</a>
+        &ensp;&middot;&ensp;
+        <a href="../resources.html">Resources</a>
     </p>
 </footer>
 
