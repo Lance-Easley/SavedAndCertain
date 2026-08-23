@@ -248,6 +248,16 @@
             to   { transform: scale(1.14); }
         }
 
+        @keyframes heroPan {
+            from { background-position: 35% center; transform: scale(1.06); }
+            to   { background-position: 65% center; transform: scale(1.0); }
+        }
+
+        @keyframes heroPanRight {
+            from { background-position: 65% center; transform: scale(1.06); }
+            to   { background-position: 35% center; transform: scale(1.0); }
+        }
+
         /* Dark gradient overlay — keep this even with a real photo */
         .hero-overlay {
             position: absolute;
@@ -690,6 +700,25 @@
             .hero-scroll-cue {
                 display: none;
             }
+
+            /* ── MOBILE HERO ANIMATION ────────────────────────────────
+               Classify each slide with one modifier class:
+                 .hero-slide--pan-left   pan left → right  (default for wide shots)
+                 .hero-slide--pan-right  pan right → left
+                 .hero-slide--zoom       center zoom (for shots that read well in portrait)
+               Zoom slides need no override — they fall through to the desktop styles.
+               Pan slides park at their animation end-state so the background-position
+               snap when .active is removed is invisible (the slide is already opacity 0).
+               ──────────────────────────────────────────────────────── */
+            .hero-slide--pan-left,
+            .hero-slide--pan-right {
+                transform: none;
+            }
+            .hero-slide--pan-left  { background-position: 65% center; }
+            .hero-slide--pan-right { background-position: 35% center; }
+
+            .hero-slide--pan-left.active  { animation: heroPan      6.5s ease-out forwards; }
+            .hero-slide--pan-right.active { animation: heroPanRight 6.5s ease-out forwards; }
         }
 
         @media (max-width: 475px) {
@@ -712,11 +741,12 @@
 <section id="hero">
 
     <!-- CAROUSEL SLIDES — add/remove/reorder freely -->
-    <div class="hero-slide" style="background-image: url('assets/img/carousel-1.png')"></div>
-    <div class="hero-slide" style="background-image: url('assets/img/carousel-2.png')"></div>
-    <div class="hero-slide" style="background-image: url('assets/img/carousel-3.jpg')"></div>
-    <div class="hero-slide" style="background-image: url('assets/img/carousel-4.png')"></div>
-    <div class="hero-slide" style="background-image: url('assets/img/carousel-5.jpg')"></div>
+    <!-- Mobile animation class: hero-slide--pan-left | hero-slide--pan-right | hero-slide--zoom -->
+    <div class="hero-slide hero-slide--pan-right"  style="background-image: url('assets/img/carousel-1.png')"></div>
+    <div class="hero-slide hero-slide--pan-left" style="background-image: url('assets/img/carousel-2.png')"></div>
+    <div class="hero-slide hero-slide--pan-right"  style="background-image: url('assets/img/carousel-3.jpg')"></div>
+    <div class="hero-slide hero-slide--pan-left" style="background-image: url('assets/img/carousel-4.png')"></div>
+    <div class="hero-slide hero-slide--zoom"  style="background-image: url('assets/img/carousel-5.jpg')"></div>
 
     <div class="hero-overlay"></div>
 
