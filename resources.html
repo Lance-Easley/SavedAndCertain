@@ -10,18 +10,18 @@
     <link rel="apple-touch-icon" href="assets/img/logo.png">
 
     <!-- SEO -->
-    <meta name="description" content="Gospel tracts and evangelism posters from Saved & Certain — free tools to help you go out and share the Good News with confidence.">
-    <meta name="keywords" content="evangelism resources, gospel tracts, evangelism posters, street evangelism tools, share the gospel, saved and certain">
+    <meta name="description" content="Bibles, gospel tracts, and evangelism posters from Saved & Certain — tools to help you go out and share the Good News with confidence.">
+    <meta name="keywords" content="evangelism resources, ESV Bible, gospel tracts, evangelism handouts, evangelism posters, street evangelism tools, share the gospel, saved and certain">
     <meta name="author" content="Saved &amp; Certain Evangelism">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Ministry Resources &mdash; Saved &amp; Certain">
-    <meta property="og:description" content="Gospel tracts and evangelism posters from Saved & Certain — free tools to help you go out and share the Good News.">
+    <meta property="og:description" content="Bibles, gospel tracts, and evangelism posters from Saved & Certain — tools to help you go out and share the Good News.">
     <meta property="og:image" content="assets/img/logo-full.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ministry Resources &mdash; Saved &amp; Certain">
-    <meta name="twitter:description" content="Gospel tracts and evangelism posters from Saved & Certain — free tools to help you go out and share the Good News.">
+    <meta name="twitter:description" content="Bibles, gospel tracts, and evangelism posters from Saved & Certain — tools to help you go out and share the Good News.">
     <meta name="twitter:image" content="assets/img/logo-full.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,12 +171,15 @@
             width: 100%;
             aspect-ratio: 1 / 1;
             overflow: hidden;
-            background: var(--navy-light);
+            background: #fff;
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .tract-thumb img {
             width: 100%; height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
             transition: transform 0.4s ease;
         }
@@ -208,6 +211,7 @@
         }
         .tract-link:hover { color: var(--gold-dark); }
         .tract-link svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
 
         /* ── POSTER GALLERY ── */
         .poster-grid {
@@ -323,28 +327,28 @@
     <h1 class="page-title">Ministry Resources</h1>
     <div class="page-rule"></div>
     <p class="page-subtitle">
-        Tools from the field — tracts and posters used in open-air evangelism.
+        Tools from the field — Bibles, tracts, and posters used in open-air evangelism.
         Take what's useful and go share the Good News.
     </p>
 </header>
 
 <div class="resources-wrap">
 
-    <!-- ── GOSPEL TRACTS ─────────────────────────────────────────── -->
+    <!-- ── HANDOUTS ──────────────────────────────────────────────── -->
     <section>
-        <span class="res-label">Gospel Tracts</span>
-        <h2 class="res-heading">Tracts for <em>every conversation</em></h2>
+        <span class="res-label">Handouts</span>
+        <h2 class="res-heading">Things to <em>put in their hands</em></h2>
         <div class="res-rule"></div>
         <p class="res-intro">
-            A good tract can keep the Gospel in someone's hands long after the conversation ends.
-            These are the two I reach for most.
+            A Bible or tract left with someone can keep the Gospel in front of them
+            long after the conversation ends. These are what I reach for most.
         </p>
 
         <div class="tract-grid">
 
             <div class="tract-card">
                 <div class="tract-thumb">
-                    <img src="assets/img/tracts/money-gospel-tract.jpeg" alt="$1,000,000 Gospel Tract">
+                    <img src="assets/img/handouts/money-gospel-tract.jpeg" alt="$1,000,000 Gospel Tract">
                 </div>
                 <div class="tract-body">
                     <p class="tract-name">$1,000,000 Gospel Tract</p>
@@ -362,7 +366,7 @@
 
             <div class="tract-card">
                 <div class="tract-thumb">
-                    <img src="assets/img/tracts/5-questions-tract.jpeg" alt="5 Questions Gospel Tract">
+                    <img src="assets/img/handouts/5-questions-tract.jpeg" alt="5 Questions Gospel Tract">
                 </div>
                 <div class="tract-body">
                     <p class="tract-name">5 Questions Gospel Tract</p>
@@ -373,6 +377,24 @@
                     </p>
                     <a href="https://www.tractplanet.com/5-Questions_p_530.html" target="_blank" rel="noopener" class="tract-link">
                         Order from Tract Planet
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tract-card">
+                <div class="tract-thumb">
+                    <img src="assets/img/handouts/esv-bible.jpg" alt="ESV Compact Bible">
+                </div>
+                <div class="tract-body">
+                    <p class="tract-name">ESV Compact Bible</p>
+                    <p class="tract-desc">
+                        The Bible I hand out during open-air evangelism. Compact enough to carry
+                        a stack, and the ESV translation is accurate and readable. When someone
+                        is open to reading more, this goes with them.
+                    </p>
+                    <a href="https://www.amazon.com/dp/B0DWNF3RZY" target="_blank" rel="noopener" class="tract-link">
+                        Order on Amazon
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     </a>
                 </div>
