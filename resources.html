@@ -133,6 +133,11 @@
             color: var(--slate-dark); max-width: 600px;
             margin-bottom: 2rem;
         }
+        .res-outro {
+            font-size: 0.97rem; line-height: 1.8;
+            color: var(--slate-dark); max-width: 600px;
+            margin-top: 2rem;
+        }
 
         /* ── RESOURCE DIVIDER ── */
         .res-divider {
@@ -286,6 +291,40 @@
         }
         .poster-download:hover { color: var(--gold-dark); }
         .poster-download svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* ── BUILD INSTRUCTIONS ── */
+        .build-materials {
+            background: var(--gold-subtle);
+            border: 1px solid rgba(238,189,79,0.22);
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.25rem;
+            max-width: 480px;
+        }
+        .build-materials-label {
+            font-size: 0.63rem; font-weight: 600; letter-spacing: 0.18em;
+            text-transform: uppercase; color: var(--gold-dark);
+            display: block; margin-bottom: 0.65rem;
+        }
+        .build-materials ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+        .build-materials li {
+            font-size: 0.92rem; color: var(--slate-dark);
+            line-height: 1.55; padding-left: 1rem; position: relative;
+        }
+        .build-materials li::before { content: '—'; position: absolute; left: 0; color: var(--gold-dark); }
+
+        .build-steps { list-style: none; display: flex; flex-direction: column; gap: 1.5rem; max-width: 660px; }
+        .build-step { display: flex; gap: 1.1rem; align-items: flex-start; }
+        .build-step-num {
+            flex-shrink: 0;
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--gold); color: var(--navy);
+            font-size: 0.78rem; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+            margin-top: 0.15rem;
+        }
+        .build-step-title { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; }
+        .build-step-desc  { font-size: 0.92rem; color: var(--slate-dark); line-height: 1.72; }
 
         /* ── FOOTER ── */
         footer {
@@ -530,6 +569,82 @@
             </div>
 
         </div>
+    </section>
+
+    <hr class="res-divider">
+
+    <!-- ── BUILD INSTRUCTIONS ──────────────────────────────────── -->
+    <section>
+        <span class="res-label">DIY Construction</span>
+        <h2 class="res-heading">How to <em>build the signs</em></h2>
+        <div class="res-rule"></div>
+        <p class="res-intro">
+            I build each sign from materials you can find at any craft or hardware store &mdash;
+            no frame or specialized tools needed. Once you have two made, they lock
+            back-to-back with Velcro so both sides face outward.
+        </p>
+
+        <div class="build-materials">
+            <span class="build-materials-label">Materials</span>
+            <ul>
+                <li>2&prime;&times;4&prime; corrugated plastic sheet (printed at a print shop)</li>
+                <li>Foam posterboard, cut to 2&prime;&times;4&prime;</li>
+                <li>Packing tape</li>
+                <li>Electrical tape</li>
+                <li>Double-sided tape</li>
+                <li>10&times; 1&Prime;&times;1&Prime; Velcro squares (hook and loop)</li>
+            </ul>
+        </div>
+
+        <ol class="build-steps">
+            <li class="build-step">
+                <span class="build-step-num">1</span>
+                <div class="build-step-body">
+                    <p class="build-step-title">Print on corrugated plastic</p>
+                    <p class="build-step-desc">Take any poster file from this page to a local print shop and have it printed directly onto a 2&prime;&times;4&prime; corrugated plastic sheet.</p>
+                </div>
+            </li>
+            <li class="build-step">
+                <span class="build-step-num">2</span>
+                <div class="build-step-body">
+                    <p class="build-step-title">Seal the edges</p>
+                    <p class="build-step-desc">Wrap electrical tape along all four edges of the corrugated plastic to protect against wear and keep moisture out of the fluting.</p>
+                </div>
+            </li>
+            <li class="build-step">
+                <span class="build-step-num">3</span>
+                <div class="build-step-body">
+                    <p class="build-step-title">Laminate the foam board</p>
+                    <p class="build-step-desc">Cut a foam posterboard to 2&prime;&times;4&prime;, then cover the entire surface with overlapping strips of packing tape &mdash; front, back, and edges. This effectively laminates the board, stiffening it and making it water and spill resistant before it ever goes outside.</p>
+                </div>
+            </li>
+            <li class="build-step">
+                <span class="build-step-num">4</span>
+                <div class="build-step-body">
+                    <p class="build-step-title">Bond the backing to the print</p>
+                    <p class="build-step-desc">Use double-sided tape to attach the laminated foam board flush to the back of the corrugated plastic print.</p>
+                </div>
+            </li>
+            <li class="build-step">
+                <span class="build-step-num">5</span>
+                <div class="build-step-body">
+                    <p class="build-step-title">Velcro the back</p>
+                    <p class="build-step-desc">Apply 10 evenly-spaced 1&Prime;&times;1&Prime; Velcro squares across the back &mdash; hook side on the left half, loop on the right &mdash; in two columns so the grip is evenly distributed.</p>
+                </div>
+            </li>
+            <li class="build-step">
+                <span class="build-step-num">6</span>
+                <div class="build-step-body">
+                    <p class="build-step-title">Pair the signs back-to-back</p>
+                    <p class="build-step-desc">Once you have at least two finished signs, press them together back-to-back. The Velcro locks them in place so both sides face outward &mdash; no stand or frame needed.</p>
+                </div>
+            </li>
+        </ol>
+
+        <p class="res-outro">
+            This is not the only way to build them, but it is the method I use currently. 
+            If you have a better way, please use it and let me know!
+        </p>
     </section>
 
 </div>
